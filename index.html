@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SolarTech Inverters</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="scirpt.js">
+<link rel="stylesheet" href="navbar.html">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f8ff;
+      color: #333;
+      overflow-x: hidden;
+    }
+    
+    header {
+      background-color: #002244;
+      padding: 1.5rem 2rem;
+      color: white;
+      text-align: center;
+    }
+    nav {
+      margin-top: 1rem;
+      display: flex;
+ 
+      gap: 2rem;
+      flex-wrap: wrap;
+      
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #0046af;
+    }
+    .hero {
+      background: linear-gradient(to right, #004466, #00aaff);
+      padding: 5rem 2rem;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      color: #004466;
+      margin-bottom: 2rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #004466;
+    }
+    .reviews {
+      background-color: #e6f7ff;
+      padding: 3rem 2rem;
+    }
+    .review {
+      background: white;
+      border-left: 5px solid #00aaff;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .stat {
+      font-size: 1.2rem;
+      color: #004466;
+    }
+    .cta {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: #004466;
+      color: white;
+    }
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f8ff;
+    }
+
+    header {
+      background-color: #002244;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+
+    nav a {
+      position: relative;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding-bottom: 4px;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0%;
+      background-color: #00ffcc;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+      }
+      nav a {
+        padding: 0.5rem 0;
+      }
+    }
+    .cta a {
+      background: #00ffcc;
+      color: #002244;
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+      display: inline-block;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    .pricing-table th, .pricing-table td {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    footer {
+      background: #001122;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+  </style>
+  
+</head>
+
+<body>
+  <header>
+    <h1>SolarTech Inverters</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="repairing.html">Repairing</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" data-aos="fade-down">
+    <h1>Welcome to SolarTech Inverters</h1>
+    <p>Power your future with reliable and efficient solar inverter solutions.</p>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Our Inverter Solutions</h2>
+    <div class="cards">
+      <div class="card" data-aos="zoom-in">
+        <img src="https://avatars.mds.yandex.net/i?id=abb47b3d4c32ddd69b597b2d313e0ba799dc1636-5212775-images-thumbs&n=13" alt="Residential"/>
+        <h3>Residential Inverters</h3>
+        <p>Efficient and reliable inverter systems for homes of all sizes.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://avatars.mds.yandex.net/i?id=01d14e514902f463e890a5563cd4150d4853e766-12314646-images-thumbs&n=13" alt="Commercial"/>
+        <h3>Commercial Inverters</h3>
+        <p>Powerful solutions tailored for businesses and commercial buildings.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://avatars.mds.yandex.net/i?id=28ac798aa9ae99482f95f3df2152ddaa1127da12-5297839-images-thumbs&n=13" alt="Hybrid"/>
+        <h3>Hybrid Inverters</h3>
+        <p>Smart inverters with battery backup and grid integration.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Why Choose SolarTech?</h2>
+    <div class="stats">
+      <div class="stat" data-aos="flip-left">
+        <h3>20+ Years</h3>
+        <p>Experience in UK & Global Markets</p>
+      </div>
+      <div class="stat" data-aos="flip-left" data-aos-delay="100">
+        <h3>1000+</h3>
+        <p>Happy Clients Served</p>
+      </div>
+      <div class="stat" data-aos="flip-left" data-aos-delay="200">
+        <h3>24/7</h3>
+        <p>Support & Monitoring</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Pricing Plans</h2>
+    <table class="pricing-table">
+      <tr>
+        <th>Model</th>
+        <th>Wattage</th>
+        <th>Battery Support</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>ST-1000</td>
+        <td>1000W</td>
+        <td>Yes</td>
+        <td>$300</td>
+      </tr>
+      <tr>
+        <td>ST-3000 Pro</td>
+        <td>3000W</td>
+        <td>Yes</td>
+        <td>$750</td>
+      </tr>
+      <tr>
+        <td>ST-Hybrid Max</td>
+        <td>5000W</td>
+        <td>Yes + Solar</td>
+        <td>$1200</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="reviews" data-aos="fade-up">
+    <h2>Client Reviews</h2>
+    <div class="review" data-aos="fade-right">
+      <p>"SolarTech Inverters have completely transformed our energy usage. Highly professional team!"</p>
+    </div>
+    <div class="review" data-aos="fade-left">
+      <p>"The performance of their hybrid inverter is incredible — reliable even during outages."</p>
+    </div>
+  </section>
+
+  <section class="cta" data-aos="fade-up">
+    <h2>Need a Custom Solution or Quick Support?</h2>
+    <p>We’re just one message away!</p>
+    <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+  </section>
+
+  <footer data="fade-up">
+    <p>&copy; 2025 SolarTech Inverters. All rights reserved.</p>
+     <div class="social-icons">
+    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  </footer>
+
+  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+</html>

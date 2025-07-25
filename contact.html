@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - SolarTech Inverters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #e8f0fe;
+      color: #222;
+    }
+    header {
+      background: #003366;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-weight: 600;
+    }
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #00ffcc;
+    }
+    .contact-section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem 4rem 2rem;
+      text-align: center;
+    }
+    .contact-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #0066cc;
+    }
+    .contact-section p {
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      color: #444;
+    }
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      width: 250px;
+      padding: 2rem 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .icon {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: #00cc66;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #004080;
+      font-weight: 700;
+    }
+    .card a {
+      color: #0066cc;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      word-break: break-word;
+      display: block;
+      margin-top: 0.2rem;
+      transition: color 0.3s;
+    }
+    .card a:hover {
+      color: #00cc66;
+    }
+    footer {
+      background: #002244;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+  <!-- Icons from Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>SolarTech Inverters</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="repairing.html">Repairing</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>We’re here to help! Reach out to us through any of the following channels:</p>
+    <div class="contact-cards">
+      <div class="card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon"><i class="fab fa-whatsapp"></i></div>
+        <h3>WhatsApp</h3>
+        <a href="https://wa.me/923001234567" target="_blank">+92 300 1234567</a>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <h3>Email</h3>
+        <a href="mailto:info@solartech.com">info@solartech.com</a>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+        <h3>Phone</h3>
+        <a href="tel:+923001234567">+92 300 1234567</a>
+      </div>
+    </div>
+  </section>
+
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 SolarTech Inverters. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200 });
+  </script>
+</body>
+</html>
