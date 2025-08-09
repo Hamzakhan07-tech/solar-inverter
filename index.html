@@ -1,355 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SolarTech Inverters</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="scirpt.js">
-<link rel="stylesheet" href="navbar.html">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SolarTech Inverters — Solar & Inverter Repair | UK-trained Service Center</title>
+  <meta name="description" content="SolarTech Inverters: UK-trained technicians for solar inverter & UPS repair, board-level diagnostics, firmware updates, on-site testing and authorised parts distribution." />
+  <meta name="keywords" content="solar inverter repair, inverter service, UPS repair, board-level repair, solar technician, NRE service centre, NS service centre, inverter firmware" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b63f6'/%3E%3Ctext x='50' y='55' font-size='48' text-anchor='middle' fill='white' font-family='Arial'%3E⚡%3C/text%3E%3C/svg%3E" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SolarTech Inverters — Solar & Inverter Repair" />
+  <meta property="og:description" content="UK-trained technicians, NS & NRE authorised service centre. Board-level repair, firmware, on-site diagnostics & spare parts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://example.com/og-image.jpg" />
+
+  <!-- Structured data (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SolarTech Inverters",
+    "image": "https://example.com/logo.png",
+    "@id": "https://example.com",
+    "url": "https://example.com",
+    "telephone": "+447700900123",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Service Center Road",
+      "addressLocality": "City",
+      "addressRegion": "Region",
+      "postalCode": "00000",
+      "addressCountry": "GB"
+    },
+    "priceRange":"$$",
+    "sameAs": [
+      "https://www.facebook.com/solartechinverters",
+      "https://www.linkedin.com/company/solartech-inverters"
+    ],
+    "openingHours":"Mo-Fr 09:00-18:00"
+  }
+  </script>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f0f8ff;
-      color: #333;
-      overflow-x: hidden;
+    :root{
+      --bg-1:#031126; --bg-2:#04203b; --glass: rgba(255,255,255,0.04); --accent1:#0b63f6; --accent2:#00a3ff; --muted:#9fb7e6; --text:#eaf6ff;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
     }
-    
-    header {
-      background-color: #002244;
-      padding: 1.5rem 2rem;
-      color: white;
-      text-align: center;
-    }
-    nav {
-      margin-top: 1rem;
-      display: flex;
- 
-      gap: 2rem;
-      flex-wrap: wrap;
-      
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: #0046af;
-    }
-    .hero {
-      background: linear-gradient(to right, #004466, #00aaff);
-      padding: 5rem 2rem;
-      color: white;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-    }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .section h2 {
-      text-align: center;
-      color: #004466;
-      margin-bottom: 2rem;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      padding: 2rem;
-      text-align: center;
-    }
-    .card img {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 1rem;
-    }
-    .card h3 {
-      margin-bottom: 0.5rem;
-      color: #004466;
-    }
-    .reviews {
-      background-color: #e6f7ff;
-      padding: 3rem 2rem;
-    }
-    .review {
-      background: white;
-      border-left: 5px solid #00aaff;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
-      margin-top: 3rem;
-    }
-    .stat {
-      font-size: 1.2rem;
-      color: #004466;
-    }
-    .cta {
-      text-align: center;
-      padding: 4rem 2rem;
-      background: #004466;
-      color: white;
-    }
-     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:radial-gradient(1200px 600px at 10% 10%, rgba(11,99,246,0.12), transparent), linear-gradient(180deg,var(--bg-1),var(--bg-2));color:var(--text);-webkit-font-smoothing:antialiased}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f0f8ff;
-    }
+    .wrap{max-width:1300px;margin:0 auto;padding:28px}
 
-    header {
-      background-color: #002244;
-      padding: 1.2rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+    header{position:sticky;top:14px;z-index:60}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));padding:12px 16px;border-radius:14px;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.04);box-shadow:0 8px 30px rgba(2,8,23,0.6);position:relative;}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(90deg,var(--accent1),var(--accent2));display:inline-flex;align-items:center;justify-content:center;font-weight:900}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0;align-items:center;transition:.3s;}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 6px;border-radius:8px;font-weight:600}
+    nav a:hover{color:var(--text)}
+    .nav-track{position:relative;height:3px;background:transparent;margin-top:4px}
+    .runner{position:absolute;left:0;top:0;height:3px;border-radius:99px;background:linear-gradient(90deg,var(--accent1),var(--accent2));width:0;transition:transform .32s cubic-bezier(.2,.9,.3,1),width .32s cubic-bezier(.2,.9,.3,1)}
 
-    .logo {
-      color: white;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
+    .menu-toggle{display:none;width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);align-items:center;justify-content:center;cursor:pointer}
+    .hamburger{width:22px;height:14px;position:relative}
+    .hamburger span{position:absolute;height:2px;width:100%;left:0;background:var(--text);border-radius:2px;transition:transform .35s ease,opacity .35s ease}
+    .hamburger span:nth-child(1){top:0}
+    .hamburger span:nth-child(2){top:6px}
+    .hamburger span:nth-child(3){top:12px}
+    .menu-open .hamburger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .menu-open .hamburger span:nth-child(2){opacity:0}
+    .menu-open .hamburger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
-    nav {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .services{grid-template-columns:repeat(2,1fr)}
+      nav ul{display:none;flex-direction:column;position:absolute;top:60px;left:0;width:100%;background:rgba(3,17,38,0.96);padding:14px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.4);}
+      nav ul.show{display:flex;}
+      .menu-toggle{display:flex}
+      .nav-track{display:none;}
     }
-    
+    @media (max-width:640px){.services{grid-template-columns:1fr}.hero{gap:12px}}
 
-    nav a {
-      position: relative;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      padding-bottom: 4px;
-    }
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:28px 0}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:16px;border:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(8px)}
+    .kicker{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent1),var(--accent2));font-weight:800}
+    h1{font-size:34px;margin:12px 0}
+    p.lead{color:var(--muted);font-size:15px}
+    .hero-stats{display:flex;gap:12px;margin-top:16px}
+    .stat{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;min-width:120px;text-align:center}
 
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 2px;
-      width: 0%;
-      background-color: #00ffcc;
-      transition: width 0.3s ease;
-    }
+    .device{background:linear-gradient(180deg, rgba(11,99,246,0.05), rgba(0,163,255,0.02));padding:18px;border-radius:12px}
+    .screen{height:260px;border-radius:10px;background:linear-gradient(135deg,#042b4a, #003a7a);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:800}
 
-    nav a:hover::after {
-      width: 100%;
-    }
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .svc{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+    .svc h3{margin:0 0 8px}
+    .svc p{margin:0;color:var(--muted)}
 
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 1rem;
-      }
-      nav a {
-        padding: 0.5rem 0;
-      }
-    }
-    .cta a {
-      background: #00ffcc;
-      color: #002244;
-      padding: 1rem 2rem;
-      margin-top: 1rem;
-      display: inline-block;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .pricing-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 2rem;
-    }
-    .pricing-table th, .pricing-table td {
-      padding: 1rem;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
-    footer {
-      background: #001122;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 3rem;
-    }
-    
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      padding: 15px;
-      font-size: 24px;
-      z-index: 999;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    
+    .process{display:flex;gap:12px;align-items:stretch;margin-top:22px}
+    .step{flex:1;padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+
+    .testimonials{margin-top:22px;display:flex;gap:12px;overflow:auto;padding-bottom:8px}
+    .test{min-width:280px;padding:14px;border-radius:12px;background:rgba(255,255,255,0.02)}
+
+    .faq{margin-top:18px}
+    .faq-item{background:var(--glass);padding:12px;border-radius:10px;margin-bottom:8px}
+
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:12px 16px;border-radius:10px;color:white;border:none;cursor:pointer;font-weight:700}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px 16px;border-radius:10px;color:var(--text)}
+
+    footer{margin-top:34px;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);text-align:center;color:var(--muted)}
+
+    .blur-orb{position:fixed;width:420px;height:420px;border-radius:50%;filter:blur(60px);opacity:0.16;background:linear-gradient(135deg,var(--accent1),var(--accent2));right:-120px;top:60px;pointer-events:none}
+    .blur-orb.left{left:-160px;right:auto;top:200px}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.9,.3,1)}
+    .reveal.show{opacity:1;transform:none}
+
+    a:focus{outline:3px solid rgba(11,99,246,0.18);outline-offset:3px}
   </style>
-  
 </head>
-
 <body>
-  <header>
-    <h1>SolarTech Inverters</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="repairing.html">Repairing</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <div class="blur-orb" aria-hidden></div>
+  <div class="blur-orb left" aria-hidden></div>
+
+  <div class="wrap">
+   <header>
+    <div class="nav">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="brand"><div class="logo">⚡</div>SolarTech</div>
+        <nav aria-label="Primary">
+          <ul id="mainNav">
+            <li><a href="index.html" data-link="home">Home</a></li>
+            <li><a href="service.html" data-link="services">Services</a></li>
+            <li><a href="about.html" data-link="about">About</a></li>
+            <li><a href="contact.html" data-link="contact">Contact</a></li>
+          </ul>
+          <div class="nav-track" aria-hidden><div class="runner" id="runner"></div></div>
+        </nav>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="menu-toggle" id="toggleBtn" aria-expanded="false" aria-label="Toggle menu">
+          <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+        <button class="btn" onclick="openWhatsapp()">WhatsApp Us</button>
+      </div>
+    </div>
   </header>
 
-  <section class="hero" data-aos="fade-down">
-    <h1>Welcome to SolarTech Inverters</h1>
-    <p>Power your future with reliable and efficient solar inverter solutions.</p>
-  </section>
+    <main>
+      <!-- ...existing main content... -->
+    </main>
 
-  <section class="section" data-aos="fade-up">
-    <h2>Our Inverter Solutions</h2>
-    <div class="cards">
-      <div class="card" data-aos="zoom-in">
-        <img src="https://avatars.mds.yandex.net/i?id=abb47b3d4c32ddd69b597b2d313e0ba799dc1636-5212775-images-thumbs&n=13" alt="Residential"/>
-        <h3>Residential Inverters</h3>
-        <p>Efficient and reliable inverter systems for homes of all sizes.</p>
-      </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="100">
-        <img src="https://avatars.mds.yandex.net/i?id=01d14e514902f463e890a5563cd4150d4853e766-12314646-images-thumbs&n=13" alt="Commercial"/>
-        <h3>Commercial Inverters</h3>
-        <p>Powerful solutions tailored for businesses and commercial buildings.</p>
-      </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="200">
-        <img src="https://avatars.mds.yandex.net/i?id=28ac798aa9ae99482f95f3df2152ddaa1127da12-5297839-images-thumbs&n=13" alt="Hybrid"/>
-        <h3>Hybrid Inverters</h3>
-        <p>Smart inverters with battery backup and grid integration.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" data-aos="fade-up">
-    <h2>Why Choose SolarTech?</h2>
-    <div class="stats">
-      <div class="stat" data-aos="flip-left">
-        <h3>20+ Years</h3>
-        <p>Experience in UK & Global Markets</p>
-      </div>
-      <div class="stat" data-aos="flip-left" data-aos-delay="100">
-        <h3>1000+</h3>
-        <p>Happy Clients Served</p>
-      </div>
-      <div class="stat" data-aos="flip-left" data-aos-delay="200">
-        <h3>24/7</h3>
-        <p>Support & Monitoring</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" data-aos="fade-up">
-    <h2>Pricing Plans</h2>
-    <table class="pricing-table">
-      <tr>
-        <th>Model</th>
-        <th>Wattage</th>
-        <th>Battery Support</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>ST-1000</td>
-        <td>1000W</td>
-        <td>Yes</td>
-        <td>$300</td>
-      </tr>
-      <tr>
-        <td>ST-3000 Pro</td>
-        <td>3000W</td>
-        <td>Yes</td>
-        <td>$750</td>
-      </tr>
-      <tr>
-        <td>ST-Hybrid Max</td>
-        <td>5000W</td>
-        <td>Yes + Solar</td>
-        <td>$1200</td>
-      </tr>
-    </table>
-  </section>
-
-  <section class="reviews" data-aos="fade-up">
-    <h2>Client Reviews</h2>
-    <div class="review" data-aos="fade-right">
-      <p>"SolarTech Inverters have completely transformed our energy usage. Highly professional team!"</p>
-    </div>
-    <div class="review" data-aos="fade-left">
-      <p>"The performance of their hybrid inverter is incredible — reliable even during outages."</p>
-    </div>
-  </section>
-
-  <section class="cta" data-aos="fade-up">
-    <h2>Need a Custom Solution or Quick Support?</h2>
-    <p>We’re just one message away!</p>
-    <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-  </section>
-
-  <footer data="fade-up">
-    <p>&copy; 2025 SolarTech Inverters. All rights reserved.</p>
-     <div class="social-icons">
-    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+    <footer>
+      © <span id="year"></span> SolarTech Inverters — UK-trained technicians • NS & NRE Service Centre
+    </footer>
   </div>
 
-  </footer>
-
-  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000 });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ const el=e.target; const d=el.dataset.delay?Number(el.dataset.delay):0; setTimeout(()=>el.classList.add('show'),d); io.unobserve(el); } });
+    },{threshold:0.12});
+    reveals.forEach(r=>io.observe(r));
+
+    // nav runner: slide to active link
+    const nav = document.getElementById('mainNav');
+    const links = Array.from(nav.querySelectorAll('a'));
+    const runner = document.getElementById('runner');
+
+    function positionRunner(el){
+      const rect = el.getBoundingClientRect();
+      const parentRect = nav.getBoundingClientRect();
+      const left = rect.left - parentRect.left;
+      runner.style.transform = `translateX(${left}px)`;
+      runner.style.width = rect.width + 'px';
+    }
+
+    // Click link -> scroll/redirect
+    links.forEach(l=>{
+      l.addEventListener('click', e=>{
+        const target = l.getAttribute('data-link');
+        if(document.getElementById(target)){
+          e.preventDefault();
+          document.getElementById(target).scrollIntoView({behavior:'smooth'});
+        }
+        positionRunner(l);
+        links.forEach(x=>x.classList.remove('active'));
+        l.classList.add('active');
+
+        // Close menu in mobile
+        if(window.innerWidth <= 980){
+          navUl.classList.remove('show');
+          document.body.classList.remove('menu-open');
+        }
+      });
+    });
+
+    // Initial position
+    window.addEventListener('load', ()=>{
+      positionRunner(links[0]);
+      links[0].classList.add('active');
+    });
+    window.addEventListener('resize', ()=>{
+      const active = nav.querySelector('a.active') || links[0];
+      positionRunner(active);
+    });
+
+    // Toggle menu logic
+    const toggle = document.getElementById('toggleBtn');
+    const navUl = document.getElementById('mainNav');
+    toggle.addEventListener('click', ()=>{
+      document.body.classList.toggle('menu-open');
+      const open = document.body.classList.contains('menu-open');
+      toggle.setAttribute('aria-expanded', open);
+      navUl.classList.toggle('show', open);
+    });
+
+    // WhatsApp opener (change number to your own)
+    function openWhatsapp(){
+      const phone = '447700900123'; // <<-- REPLACE with your phone in international format
+      const message = encodeURIComponent('Hello SolarTech — I need help with my inverter. Model: [add model]. Problem: [describe].');
+      window.open(`https://wa.me/${phone}?text=${message}`,'_blank');
+    }
+
+    function sendQuickRequest(){
+      const model = document.getElementById('device').value || 'Unknown Model';
+      const phone = document.getElementById('phone').value || '';
+      const phoneSan = phone.replace(/[^+0-9]/g,'');
+      const msg = encodeURIComponent(`Repair request — Model: ${model} | Contact: ${phoneSan}`);
+      const number = '447700900123'; // <<-- replace
+      window.open(`https://wa.me/${number}?text=${msg}`,'_blank');
+    }
+
+    // lightweight SEO-friendly content injection: visible H2s for crawlers
+    (function addExtraSEO(){
+      const seoBlock = document.createElement('div');
+      seoBlock.style.cssText = 'position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;';
+      seoBlock.innerHTML = `
+        <h2>Solar inverter repair services</h2>
+        <p>Board-level repair, MOSFET replacement, capacitor health testing, firmware updates, on-site diagnostics and preventive maintenance for hybrid solar inverters and UPS systems.</p>
+      `;
+      document.body.appendChild(seoBlock);
+    })();
   </script>
 </body>
 </html>

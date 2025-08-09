@@ -1,159 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact - SolarTech Inverters</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — SolarTech Inverters</title>
+  <meta name="description" content="Contact SolarTech Inverters for professional solar inverter and UPS repair. Request a quote via WhatsApp or email." />
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-    body {
-      background: #e8f0fe;
-      color: #222;
-    }
-    header {
-      background: #003366;
-      color: white;
-      padding: 1.5rem 2rem;
-      text-align: center;
-      font-weight: 600;
-    }
-    nav {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: #00ffcc;
-    }
-    .contact-section {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 2rem 4rem 2rem;
-      text-align: center;
-    }
-    .contact-section h2 {
-      font-size: 2.8rem;
-      margin-bottom: 1rem;
-      color: #0066cc;
-    }
-    .contact-section p {
-      font-size: 1.1rem;
-      margin-bottom: 3rem;
-      color: #444;
-    }
-    .contact-cards {
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-    }
-    .card {
-      background: white;
-      width: 250px;
-      padding: 2rem 1.5rem;
-      border-radius: 15px;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-align: center;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
-    .icon {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      color: #00cc66;
-      animation: bounce 2s infinite;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: #004080;
-      font-weight: 700;
-    }
-    .card a {
-      color: #0066cc;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1.1rem;
-      word-break: break-word;
-      display: block;
-      margin-top: 0.2rem;
-      transition: color 0.3s;
-    }
-    .card a:hover {
-      color: #00cc66;
-    }
-    footer {
-      background: #002244;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
+    :root{--bg:#071028;--card:#08243f;--accent1:#0b63f6;--accent2:#00a3ff;--muted:#a9c8ee;--text:#eaf6ff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,var(--bg),#041528);color:var(--text);-webkit-font-smoothing:antialiased}
+    .container{max-width:900px;margin:40px auto;padding:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:14px;border:1px solid rgba(255,255,255,0.04);backdrop-filter:blur(6px)}
+    h1{margin:0 0 6px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+
+    /* form */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .field{position:relative;margin-top:6px}
+    label{position:absolute;left:12px;top:12px;pointer-events:none;color:var(--muted);transition:all .18s ease;font-size:13px}
+    input,textarea,select{width:100%;padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);outline:none;font-size:14px}
+    textarea{resize:vertical;min-height:120px}
+    input:focus + label, textarea:focus + label, input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label{transform:translateY(-10px) scale(.92);color:var(--accent2)}
+    .full{grid-column:1/-1}
+
+    .actions{display:flex;gap:10px;align-items:center;margin-top:12px}
+    .btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:12px 16px;border-radius:10px;border:none;color:white;cursor:pointer;font-weight:700}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px 16px;border-radius:10px;color:var(--text)}
+
+    .info-row{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .info{flex:1;min-width:200px;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px}
+    .info strong{display:block}
+
+    /* success modal */
+    .modal{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(3,6,15,0.6);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .18s}
+    .modal.show{opacity:1;pointer-events:auto}
+    .modal-card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);text-align:center}
+
+    /* responsive */
+    @media (max-width:780px){form{grid-template-columns:1fr}.info-row{flex-direction:column}}
   </style>
-  <!-- Icons from Font Awesome CDN -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>SolarTech Inverters</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="repairing.html">Repairing</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div class="container">
+    <div class="card">
+      <h1>Contact SolarTech</h1>
+      <p class="lead">Quick quote or repair request — send details and our UK-trained team will reply fast. Choose WhatsApp for fastest response.</p>
 
-  <section class="contact-section" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <p>We’re here to help! Reach out to us through any of the following channels:</p>
-    <div class="contact-cards">
-      <div class="card" data-aos="zoom-in" data-aos-delay="100">
-        <div class="icon"><i class="fab fa-whatsapp"></i></div>
-        <h3>WhatsApp</h3>
-        <a href="https://wa.me/923001234567" target="_blank">+92 300 1234567</a>
-      </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="200">
-        <div class="icon"><i class="fas fa-envelope"></i></div>
-        <h3>Email</h3>
-        <a href="mailto:info@solartech.com">info@solartech.com</a>
-      </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="300">
-        <div class="icon"><i class="fas fa-phone-alt"></i></div>
-        <h3>Phone</h3>
-        <a href="tel:+923001234567">+92 300 1234567</a>
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="field">
+          <input id="name" type="text" placeholder=" " required />
+          <label for="name">Full name</label>
+        </div>
+
+        <div class="field">
+          <input id="phone" type="tel" placeholder=" " required />
+          <label for="phone">Phone (with country code)</label>
+        </div>
+
+        <div class="field full">
+          <input id="email" type="email" placeholder=" " />
+          <label for="email">Email (optional)</label>
+        </div>
+
+        <div class="field full">
+          <input id="device" type="text" placeholder=" " />
+          <label for="device">Device model / serial (optional)</label>
+        </div>
+
+        <div class="field full">
+          <textarea id="message" placeholder=" "></textarea>
+          <label for="message">Describe the problem (short)</label>
+        </div>
+
+        <div class="actions full">
+          <button class="btn" type="submit">Send via WhatsApp</button>
+          <button type="button" class="btn-ghost" onclick="sendEmail()">Send Email</button>
+        </div>
+      </form>
+
+      <div class="info-row">
+        <div class="info">
+          <strong>Phone / WhatsApp</strong>
+          <div>+44 7700 900123</div>
+        </div>
+        <div class="info">
+          <strong>Email</strong>
+          <div>support@solartech.example</div>
+        </div>
+        <div class="info">
+          <strong>Service Hours</strong>
+          <div>Mon–Fri 09:00–18:00</div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <footer data-aos="fade-up">
-    <p>&copy; 2025 SolarTech Inverters. All rights reserved.</p>
-  </footer>
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <h3>Request ready</h3>
+      <p style="color:var(--muted)">We opened WhatsApp with your message — send it to contact our team. If WhatsApp didn't open, copy the message and send it manually.</p>
+      <div style="margin-top:12px"><button class="btn" onclick="closeModal()">OK</button></div>
+    </div>
+  </div>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1200 });
+    // Replace the phone below with your business WhatsApp number (international format, no + or dashes)
+    const WHATSAPP_NUMBER = '447700900123'; // <<-- CHANGE THIS
+    const EMAIL_TO = 'support@solartech.example'; // <<-- CHANGE THIS
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const device = document.getElementById('device').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if(!name || !phone){ alert('Please enter name and phone.'); return; }
+
+      const parts = [];
+      parts.push(`Name: ${name}`);
+      parts.push(`Phone: ${phone}`);
+      if(email) parts.push(`Email: ${email}`);
+      if(device) parts.push(`Device: ${device}`);
+      if(message) parts.push(`Problem: ${message}`);
+
+      const text = parts.join(' | ');
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+      // open whatsapp in new tab
+      window.open(url, '_blank');
+      showModal();
+    }
+
+    function sendEmail(){
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const device = document.getElementById('device').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !phone){ alert('Please enter name and phone.'); return; }
+      const subject = encodeURIComponent('Repair request from website');
+      const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nDevice: ${device}\nProblem: ${message}`);
+      window.location.href = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
+    }
+
+    function showModal(){ document.getElementById('modal').classList.add('show'); }
+    function closeModal(){ document.getElementById('modal').classList.remove('show'); }
   </script>
 </body>
 </html>

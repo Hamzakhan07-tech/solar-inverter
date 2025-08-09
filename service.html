@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Inverter Repair - Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom right, #0a3d62, #3c6382);
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.3);
+      animation: fadeInDown 1s ease;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .service-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, background 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.2);
+    }
+
+    .service-card h2 {
+      color: #f5f6fa;
+      font-size: 1.5rem;
+    }
+
+    .service-card p {
+      color: #dcdde1;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Solar Inverter Repair Services</h1>
+    <p>Professional UK-trained service for all types of solar inverters</p>
+  </header>
+
+  <section class="services">
+    <div class="service-card">
+      <h2>Full Diagnostic & Testing</h2>
+      <p>Comprehensive system checks to identify faults and performance issues quickly and accurately.</p>
+    </div>
+    <div class="service-card">
+      <h2>Component Replacement</h2>
+      <p>Replacement of damaged or worn-out inverter components with high-quality parts.</p>
+    </div>
+    <div class="service-card">
+      <h2>Firmware & Software Updates</h2>
+      <p>Latest updates for improved performance and enhanced inverter lifespan.</p>
+    </div>
+    <div class="service-card">
+      <h2>Preventive Maintenance</h2>
+      <p>Regular servicing to avoid costly breakdowns and keep your solar power running efficiently.</p>
+    </div>
+    <div class="service-card">
+      <h2>Emergency Repair Service</h2>
+      <p>Fast, reliable emergency repairs to minimize downtime and restore power quickly.</p>
+    </div>
+    <div class="service-card">
+      <h2>System Optimization</h2>
+      <p>Fine-tuning inverter settings for maximum energy efficiency and output.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SolarTech Inverters. All rights reserved.
+  </footer>
+
+</body>
+</html>
